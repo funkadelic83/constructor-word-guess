@@ -1,13 +1,16 @@
 var Letter = require("./letter.js");
 
-wordToGuess = "foobar";
-
-var Word = function(letter) {
+var Word = function() {
     this.letters = [];
-    this.guessLetter = function(guess) {
-        this.letters.push(new Letter(guess));
+    this.fillArray = function(secretWord) {
+        for (var i = 0; i < secretWord.length; i++) {
+            this.letters.push(new Letter(secretWord[i]));
+        }
+        
     };
     console.log(this.letters);
+    
     }
 
-// module.exports = Classroom;
+module.exports = Word;
+

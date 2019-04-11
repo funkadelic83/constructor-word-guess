@@ -1,17 +1,14 @@
 var Word = require("./word.js");
 
+var guess = process.argv[2];
+
 var wordsArray = ["money", "cash", "cheddar", "bucks", "dollars", "dolla dolla bills"];
 var secretWord = wordsArray[(Math.floor(Math.random() * wordsArray.length))];
-
 var chosenWord = new Word(secretWord);
-chosenWord.guessLetter();
 
-// console.log(secretWord);
+console.log(secretWord);
 
-// var guessWord = new Word(wordToGuess);
+// console.log(chosenWord);
 
-////// * **index.js**: The file containing the logic for the course of the game, which depends on `Word.js` and:
-
-//   * Randomly selects a word and uses the `Word` constructor to store it
-
-//   * Prompts the user for each guess and keeps track of the user's remaining guesses
+//CALLS THE FILL ARRAY METHOD ON THE CHOSEN WORD OBJECT
+chosenWord.fillArray(secretWord);
