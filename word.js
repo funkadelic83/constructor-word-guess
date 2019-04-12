@@ -1,16 +1,16 @@
 var Letter = require("./letter.js");
 
-var Word = function() {
-    this.letters = [];
-    this.fillArray = function(secretWord) {
+var Word = function () {
+    this.lettersArray = [];
+    this.fillArray = function (secretWord) {
         for (var i = 0; i < secretWord.length; i++) {
-            this.letters.push(new Letter(secretWord[i]));
+            this.lettersArray.push(new Letter(secretWord[i]));
         }
-        
+        this.lettersArray.forEach(function (letterObj) {
+            console.log(letterObj.display);
+        })
     };
-    console.log(this.letters);
-    
-    }
+}
 
 module.exports = Word;
 

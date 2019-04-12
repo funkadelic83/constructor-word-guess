@@ -1,29 +1,21 @@
-var string = [];
-
-var Letter = function () {
-    this.letter = "";
+var Letter = function (input) {
+    this.letter = input;
+    this.display = "";
     this.letterGuessed = false;
-    if (this.letterGuessed === true) {
-        string.push(this.letter);
-    } else if (this.letter === " ") {
-        string.push(" ");
+    if (this.letter === " ") {
+        this.display = " ";
     } else {
-        string.push("_");
-        
+        this.display = "_";
     };
-    // console.log(string.join(" "));
-    this.addLetter = function (guess) {
-        if (this.letter === guess) {
+    this.addLetter = function(userGuess) {
+        if (this.letter === userGuessuess) {
             this.letterGuessed = true;
-            console.log(this.letter);
+            this.display = this.letter;
         } else if (this.letter === " ") {
             console.log(" ");
         } else {
             console.log("?");
         }
-    }
-};
-// Letter('a');
-// guessLetter('b');
-
+    };
+}
 module.exports = Letter;
