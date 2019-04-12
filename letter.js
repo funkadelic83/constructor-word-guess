@@ -14,7 +14,7 @@ var Letter = function (input) {
         } else if (this.letter === " ") {
             console.log(" ");
         } else {
-            console.log("?");
+            console.log("_");
         }
     };
 }
