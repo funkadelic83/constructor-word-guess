@@ -32,6 +32,7 @@ function guessLetter() {
             //if the guess is wrong, decrement wrongGuesses by 1 and console log remainingGuesses to user.
             // if (remainingGuesses < 1) {console.log("You lose!")} to the user
             //if (remaining guessses > 0) then prompt the user for another letter
+            // if all the letters are correctly guessed, console.log("You win") and end the game.
             
 
             guessLetter();
